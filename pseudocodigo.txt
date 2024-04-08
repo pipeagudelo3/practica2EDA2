@@ -1,0 +1,64 @@
+1. Declarar una Lista ligada vacía 
+
+Para construir la cola de prioridad
+2. Leer el texto de entrada y evaluar cada caracter 
+
+    2.1. Si el caracter está en la lista ligada encontrar el nodo que lo contiene y sumar 1 a su frecuencia 
+
+    2.2. Si no, crear un nuevo nodo con el valor del caracter y frecuencia 1 e insertar el nuevo nodo a la lista ligada ordenadamente 
+
+
+Para construir un árbol de huffman
+3. Mientras la lista ligada tenga más de un nodo  
+
+    3.1. Retirar la cabeza de la lista y su nodo siguiente (Menores de la lista) y almacenarlos en apuntadores auxiliares izquierdo y derecho respectivamente 
+
+    3.2. Crear un nodo interno con valor nulo para caracter y la suma de las frecuencias de izquierdo y derecho como valor de su frecuencia 
+
+    3.3. Asignar al nodo interno izquierdo y derecho como sus respectivos apuntadores 
+
+    3.4. Insertar el nuevo nodo a la lista ligada 
+
+4. Ahora la lista únicamente contiene un nodo que es la raíz de un árbol de huffman 
+
+
+Para conseguir códigos binarios para cada caracter
+5. Para cada nodo del árbol recursivamente iniciando con el nodo raíz 
+
+    5.1. Verificar si el nodo es hoja  
+
+        5.1.1. Si el nodo es hoja registrar en hash table la letra como clave y su camino binario como valor 
+
+        5.1.2. Si no, realizar llamada recursiva para los nodos izquierdo y derecho del nodo actual 
+
+6. Ahora se tiene una hash table con los valores comprimidos de cada letra 
+
+
+Para comprimir una cadena de texto
+7. Para cada caracter en una cadena de texto 
+
+    7.1. Verificar que el caracter se encuentre como clave en la tabla de codificación  
+
+        7.1.1. Si se encuentra, concatenar su equivalente binario según la tabla de codificación a un string resultante  
+
+        7.1.2. Si no, catch error 
+
+8. Ahora el string inicial se ha convertido en su equivalente comprimido
+
+
+Para descomprimir una cadena de texto
+9. Para cada caracter en un texto comprimido 
+
+    9.1. Concatenar el caracter a una variable auxiliar código
+
+    9.2. Verificar si la cadena contenida en la variable auxiliar código corresponde a un código en la tabla de codificación
+
+        9.2.1. Si si, Concatenar el caracter al cuál corresponde el código a un string resultante y asignar a la variable código un string vacío
+
+        9.2.2. Si no, Repetir el proceso concatenando el siguiente caracter
+
+10. Ahora el string inicial se ha convertido en su equivalente descomprimido
+
+11.Prueba de comit
+
+12. Segunda Prueba
